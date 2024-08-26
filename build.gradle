@@ -9,7 +9,7 @@ group = 'jp.sobue.demo'
 version = '0.0.1-SNAPSHOT'
 
 java {
-    sourceCompatibility = '17'
+    sourceCompatibility = '21'
 }
 
 configurations {
@@ -20,12 +20,6 @@ configurations {
 
 repositories {
     mavenCentral()
-}
-
-ext {
-    // Fix for CVE-2022-1471
-    // https://security.snyk.io/vuln/SNYK-JAVA-ORGYAML-3152153
-    set('snakeYamlVersion', "2.0")
 }
 
 dependencies {

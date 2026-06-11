@@ -5,7 +5,7 @@
 # This workflow will build a Java project with Gradle and cache/restore any dependencies to improve the workflow execution time
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-gradle
 
-name: Java CI with Gradle
+name: Java CI with Gradle and Maven
 
 on:
   push:
@@ -28,7 +28,10 @@ jobs:
       with:
         java-version: '25'
         distribution: 'temurin'
+        cache: maven
     - name: Set up Gradle
       uses: gradle/actions/setup-gradle@5e2ebd065dc2488b7a6ad670704656cbbe1e8f60 # v6.1.1
     - name: Build with Gradle
       run: ./gradlew build
+    - name: Build with Maven
+      run: ./mvnw --batch-mode verify

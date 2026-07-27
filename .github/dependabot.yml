@@ -9,6 +9,9 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    ignore:
+      - dependency-name: "org.graalvm.buildtools:native-maven-plugin"
+        versions: ["1.1.6"]
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:

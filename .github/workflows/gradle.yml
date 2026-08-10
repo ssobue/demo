@@ -67,7 +67,7 @@ jobs:
   sonarqube-scan:
     name: SonarQube Scan (JDK 25)
     needs: check-sonarqube-token
-    if: ${{ needs.check_sonarqube_token.outputs.configured == 'true' }}
+    if: ${{ needs.check-sonarqube-token.outputs.configured == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1

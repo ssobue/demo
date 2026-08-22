@@ -17,6 +17,8 @@ jobs:
       fail-fast: false
       matrix:
         java-version: [ '25', '26' ]
+    #env:
+    #  SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
     steps:
     - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
     - name: Set up JDK ${{ matrix.java-version }}
@@ -28,6 +30,10 @@ jobs:
       uses: gradle/actions/setup-gradle@9c971963bec38e04b3d30dcc455b5382be2fdbfb # v6.3.0
     - name: Build with Gradle
       run: ./gradlew build
+    #- name: Analyze with SonarQube Cloud
+    #  if: ${{ matrix.java == '25' && env.SONAR_TOKEN != '' && (github.event_name != 'pull_request' || github.event.pull_request.user.login != 'dependabot[bot]') }}
+    #  run: ./gradlew -PjavaVersion=${{ matrix.java }} sonar -Dsonar.token="${SONAR_TOKEN}"
+
 
   native-build:
     runs-on: ubuntu-latest

@@ -104,11 +104,14 @@ With Gradle:
 
 ## Continuous integration
 
-The template contains matching Maven and Gradle workflows. Each workflow:
+The template contains Maven and Gradle workflows. Both workflows:
 
 - builds and tests the application on JDK 25 and JDK 26;
-- builds a native executable with GraalVM JDK 25; and
-- runs a SonarQube scan only when the `SONAR_TOKEN` repository secret is set.
+- builds a native executable with GraalVM JDK 25.
+
+The Maven workflow also runs the SonarQube scan on its JDK 25 build when the
+`SONAR_TOKEN` repository secret is set. The SonarQube configuration is in
+`pom.xml`; the Gradle workflow does not run that scan.
 
 After choosing a build system, keep only its workflow. This prevents duplicate
 builds and keeps the selected build definition authoritative.

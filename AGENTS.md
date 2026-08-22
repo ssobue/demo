@@ -64,9 +64,13 @@ resource metadata, packaging, or GraalVM-related dependencies:
 
 ## Continuous integration
 
-Keep `.github/workflows/maven.yml` and `.github/workflows/gradle.yml` equivalent
-while both build systems exist. Preserve the JDK 25 and JDK 26 build matrix and
-the GraalVM JDK 25 native build unless a task changes the supported versions.
+Keep the normal build, test, and native-build portions of
+`.github/workflows/maven.yml` and `.github/workflows/gradle.yml` equivalent while
+both build systems exist. A task that explicitly targets one build system may
+add build-specific analysis configuration to that workflow; document the
+intentional asymmetry in both READMEs. Preserve the JDK 25 and JDK 26 build
+matrix and the GraalVM JDK 25 native build unless a task changes the supported
+versions.
 
 SonarQube scans are optional. The scan job must run only when the
 `check-sonarqube-token` job reports that `SONAR_TOKEN` is configured. Match job

@@ -1,4 +1,4 @@
-package jp.sobue.demo;
+package dev.sobue.demo;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

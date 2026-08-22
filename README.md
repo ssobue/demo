@@ -28,7 +28,7 @@ installation of either build tool is not required.
 
 At minimum, update these sample values:
 
-- `jp.sobue.demo` in the Java package and build configuration
+- `dev.sobue.demo` in the Java package and build configuration
 - `demo` in the artifact name, root project name, and `spring.application.name`
 - `0.0.1-SNAPSHOT` if the project uses a different initial version
 

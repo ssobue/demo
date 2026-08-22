@@ -1,4 +1,4 @@
-package jp.sobue.demo;
+package dev.sobue.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

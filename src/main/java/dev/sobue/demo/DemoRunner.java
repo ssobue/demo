@@ -1,4 +1,4 @@
-package jp.sobue.demo;
+package dev.sobue.demo;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.ApplicationArguments;

@@ -26,7 +26,7 @@ Wrapper が必要な Maven または Gradle を取得するため、ビルドツ
 
 少なくとも、次のサンプル値を変更してください。
 
-- Java パッケージとビルド設定の `jp.sobue.demo`
+- Java パッケージとビルド設定の `dev.sobue.demo`
 - アーティファクト名、ルートプロジェクト名、`spring.application.name` の `demo`
 - プロジェクトの初期バージョンが異なる場合は `0.0.1-SNAPSHOT`
 

@@ -54,7 +54,7 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-    errorprone 'com.google.errorprone:error_prone_core:2.51.0'
+    errorprone 'com.google.errorprone:error_prone_core:2.52.0'
     errorprone 'com.uber.nullaway:nullaway:0.14.3'
 }
 

@@ -56,6 +56,8 @@
         <pmd.version>7.29.0</pmd.version>
         <!-- Argument Line -->
         <surefireArgLine/>
+        <!-- Override Spring Dependencies -->
+        <logback.version>1.6.8</logback.version>
     </properties>
 
     <dependencies>

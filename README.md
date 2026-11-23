@@ -106,7 +106,7 @@ With Gradle:
 
 The template contains Maven and Gradle workflows. Both workflows:
 
-- builds and tests the application on JDK 25 and JDK 26;
+- builds and tests the application on JDK 25 and JDK 27;
 - builds a native executable with GraalVM JDK 25.
 
 The Maven workflow also runs the SonarQube scan on its JDK 25 build when the

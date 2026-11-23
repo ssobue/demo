@@ -16,7 +16,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        java-version: [ '25', '26' ]
+        java-version: [ '25', '27' ]
     #env:
     #  SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
     steps:

@@ -44,7 +44,7 @@ export JAVA_HOME="$(/usr/libexec/java_home -v 25)"
 ./gradlew build
 ```
 
-Repeat the builds with JDK 26 when it is available locally. If a supported JDK
+Repeat the builds with JDK 27 when it is available locally. If a supported JDK
 is unavailable, report which verification could not be run.
 
 Use these primary verification commands:
@@ -68,7 +68,7 @@ Keep the normal build, test, and native-build portions of
 `.github/workflows/maven.yml` and `.github/workflows/gradle.yml` equivalent while
 both build systems exist. A task that explicitly targets one build system may
 add build-specific analysis configuration to that workflow; document the
-intentional asymmetry in both READMEs. Preserve the JDK 25 and JDK 26 build
+intentional asymmetry in both READMEs. Preserve the JDK 25 and JDK 27 build
 matrix and the GraalVM JDK 25 native build unless a task changes the supported
 versions.
 

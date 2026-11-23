@@ -114,6 +114,14 @@ SonarQube の設定は `pom.xml` にあり、Gradle のワークフローでは�
 ビルドシステムを選んだ後は、そのビルドシステムに対応するワークフローだけを残します。
 これにより重複したビルドを避け、選択したビルド定義を唯一の正とできます。
 
+## Dependabot の Pull Request をまとめる
+
+Git 2.45 以降と認証済みの GitHub CLI を使い、`.github/scripts/batch-dependabot.sh --dry-run` で取り込むコミットを確認できます。
+既定ブランチ向けに取り込める Dependabot の Pull Request が 2 件以上あれば、`--dry-run` を外して 1 件の Pull Request を作成できます。
+元のコミットは個別に残り、統合した Pull Request の本文から元の Pull Request を参照できます。
+既定ブランチにもコミットを個別に残すには、マージコミットまたはリベースマージを使います。
+マージ後に元の Pull Request を閉じます。
+
 ## プロジェクト構成
 
 ```text

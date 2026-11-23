@@ -116,6 +116,15 @@ The Maven workflow also runs the SonarQube scan on its JDK 25 build when the
 After choosing a build system, keep only its workflow. This prevents duplicate
 builds and keeps the selected build definition authoritative.
 
+## Batch Dependabot pull requests
+
+Run `.github/scripts/batch-dependabot.sh --dry-run` to preview a batch using Git
+2.45 or newer and an authenticated GitHub CLI. Omit `--dry-run` to create one pull
+request when at least two open Dependabot pull requests contribute changes to
+the default branch. The batch keeps the source commits separate and links to
+each source pull request. Use a merge commit or rebase merge to keep the commits
+separate on the default branch. Close the source pull requests after the batch merges.
+
 ## Project layout
 
 ```text
